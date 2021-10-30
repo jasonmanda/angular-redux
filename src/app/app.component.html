@@ -25,10 +25,10 @@
     </div>
 </div>
 <div class="row mt-2">
-  <div class="col-md-6 mt-5" id="car-{{i}}" *ngFor="let x of cars;let i = index">
+  <div class="col-md-6 mt-5" id="car-{{i}}" *ngFor="let x of cars|async;let i = index">
     <app-card-info [car]="x" [index]="i"></app-card-info>
   </div>
-  <p class="alert alert-danger" *ngIf="cars.length==0">Pas de données</p>
+  <p class="alert alert-danger" *ngIf="cars">Pas de données</p>
   
 </div>
 </div>

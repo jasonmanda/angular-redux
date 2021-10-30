@@ -6,6 +6,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CardInfoComponent } from './card-info/card-info.component';
+import { StoreModule } from '@ngrx/store';
+import { carReducer } from 'src/reducer/car.reducer';
 
 @NgModule({
   declarations: [
@@ -17,9 +19,11 @@ import { CardInfoComponent } from './card-info/card-info.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    StoreModule.forRoot({cars: carReducer })
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+}
