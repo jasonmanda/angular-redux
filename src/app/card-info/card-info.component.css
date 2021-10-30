@@ -1,0 +1,10 @@
+.text-right{
+    text-align: right;
+}
+.close-x-c{
+    top:2px;
+    right: 6px;
+    position: absolute;
+    cursor: pointer;
+    
+}

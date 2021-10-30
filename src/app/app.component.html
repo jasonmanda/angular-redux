@@ -1,0 +1,63 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 mx-auto card mt-2">
+      <div class="card-body">
+        <form method="post" (ngSubmit)="envoyer($event)">
+          <h1 class="animate__animated animate__slideInDown">Formulaire produit
+          </h1>
+          <div class="form-group form-row">
+              <label for="libelle">Libelle</label>
+              <input type="text" class="form-control" maxlength="20" required id="libelle" name="libelle" [(ngModel)]="libelle"/>
+          </div>
+          <div class="form-group form-row mb-2">
+            <label for="qte">Quantité</label>
+            <input type="number" class="form-control" [min]="min" [max]="max" required id="qte" name="qte" [(ngModel)]="qte"/>
+        </div>
+        <div class="form-group form-row text-center" [ngSwitch]='status'>
+          <button *ngSwitchDefault type="submit" class="btn btn-success">Valider</button>
+          <button *ngSwitchCase="'encours'" class="btn btn-warning" disabled>encours</button>
+          <!-- <button *ngSwitchCase="'erreur'" class="btn btn-danger" disabled>erreur</button> -->
+
+        </div>
+          
+        </form>
+      </div>
+    </div>
+</div>
+<div class="row mt-2">
+  <div class="col-md-6 mt-5" id="car-{{i}}" *ngFor="let x of cars;let i = index">
+    <app-card-info [car]="x" [index]="i"></app-card-info>
+  </div>
+  <p class="alert alert-danger" *ngIf="cars.length==0">Pas de données</p>
+  
+</div>
+</div>
+
+
+<button type="button" class="btn btn-primary" id="liveToastBtn" (click)="show()">Show live toast</button>
+
+<div class="toast-container">
+  <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <img src="..." class="rounded me-2" alt="...">
+      <strong class="me-auto">Bootstrap</strong>
+      <small class="text-muted">just now</small>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+      See? Just like this.
+    </div>
+  </div>
+
+  <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <img src="..." class="rounded me-2" alt="...">
+      <strong class="me-auto">Bootstrap</strong>
+      <small class="text-muted">2 seconds ago</small>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+      Heads up, toasts will stack automatically
+    </div>
+  </div>
+</div>
