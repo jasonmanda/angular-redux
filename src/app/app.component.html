@@ -34,7 +34,7 @@
 <p class="alert alert-danger" *ngIf="(cars|async)?.length==0">Pas de données</p>
 
 
-<button type="button" class="btn btn-primary" id="liveToastBtn" (click)="show()">Show live toast</button>
+<button type="button" class="btn btn-primary" id="liveToastBtn" (click)="reload()">Show live toast</button>
 
 <div class="toast-container">
   <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">

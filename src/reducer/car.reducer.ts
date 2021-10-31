@@ -12,6 +12,7 @@ import { Car } from "src/model/car";
             case FETCH_LIST:
                 return [...state, action.payload];
             case FETCH_FULL_LIST:
+                console.log(action.payload)
                 return [...action.payload];
             default:
                 return state;

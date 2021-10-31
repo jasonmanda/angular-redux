@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { Car } from 'src/model/car';
 import { IAppState } from 'src/state/car.state';
 import { CarService } from '../services/car.service';
@@ -43,7 +44,16 @@ export class AppComponent {
     //       })
 
   }
-  public show() {
-    $('.toast').toast('show')
+  public reload() {
+    this.carService.list().subscribe(x=>{
+
+
+      this.store.dispatch({
+        type: 'FETCH_FULL_LIST',
+        payload:x.map(x=>{
+          return{ brand:x.brand};
+        })
+      });
+    });
   }
 }
