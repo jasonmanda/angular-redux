@@ -5,14 +5,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
-import { CardInfoComponent } from './card-info/car-info.component';
+import { CarInfoComponent } from './car-info/car-info.component';
 import { StoreModule } from '@ngrx/store';
 import { carReducer } from 'src/reducer/car.reducer';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CardInfoComponent
+    CarInfoComponent
   ],
   imports: [
     BrowserModule,

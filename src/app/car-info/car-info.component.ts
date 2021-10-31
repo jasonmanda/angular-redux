@@ -8,7 +8,7 @@ import { IAppState } from 'src/state/car.state';
   templateUrl: './car-info.component.html',
   styleUrls: ['./car-info.component.css']
 })
-export class CardInfoComponent implements OnInit {
+export class CarInfoComponent implements OnInit {
 
   @Input("car") car: any;
   @Input("index") index: number = 0;
