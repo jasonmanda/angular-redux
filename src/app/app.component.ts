@@ -46,12 +46,10 @@ export class AppComponent {
   }
   public reload() {
     this.carService.list().subscribe(x=>{
-
-
       this.store.dispatch({
-        type: 'FETCH_FULL_LIST',
+        type: 'FETCH_LIST_CAR',
         payload:x.map(x=>{
-          return{ brand:x.brand};
+          return { brand:x.brand};
         })
       });
     });
