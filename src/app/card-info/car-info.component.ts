@@ -4,9 +4,9 @@ import { Car } from 'src/model/car';
 import { IAppState } from 'src/state/car.state';
 
 @Component({
-  selector: 'app-card-info',
-  templateUrl: './card-info.component.html',
-  styleUrls: ['./card-info.component.css']
+  selector: 'app-car-info',
+  templateUrl: './car-info.component.html',
+  styleUrls: ['./car-info.component.css']
 })
 export class CardInfoComponent implements OnInit {
 

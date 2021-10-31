@@ -26,7 +26,7 @@
 </div>
 <div class="row mt-2">
   <div class="col-md-6 mt-5" id="car-{{i}}" *ngFor="let x of cars|async;let i = index">
-    <app-card-info [car]="x" [index]="i"></app-card-info>
+    <app-car-info [car]="x" [index]="i"></app-car-info>
   </div>
   
 </div>
