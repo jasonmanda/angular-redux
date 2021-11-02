@@ -4,17 +4,13 @@
     <div class="card">
       <div class="card-body">
         <form method="post" (ngSubmit)="envoyer($event)">
-          <h1 class="animate__animated animate__slideInDown">Formulaire produit
+          <h1 class="animate__animated animate__slideInDown">Formulaire {{title}}
           </h1>
           <div class="form-group form-row">
-              <label for="libelle">Libelle</label>
-              <input type="text" class="form-control" maxlength="20" required id="libelle" name="libelle" [(ngModel)]="libelle"/>
+              <label for="marque">Marque</label>
+              <input type="text" class="form-control" maxlength="20" required id="marque" name="marque" [(ngModel)]="marque"/>
           </div>
-          <div class="form-group form-row mb-2">
-            <label for="qte">Quantité</label>
-            <input type="number" class="form-control" [min]="min" [max]="max" required id="qte" name="qte" [(ngModel)]="qte"/>
-        </div>
-        <div class="form-group form-row text-center" [ngSwitch]='status'>
+        <div class="form-group form-row text-center mt-2" [ngSwitch]='status'>
           <button *ngSwitchDefault type="submit" class="btn btn-success">Valider</button>
           <button *ngSwitchCase="'encours'" class="btn btn-warning" disabled>encours</button>
           <!-- <button *ngSwitchCase="'erreur'" class="btn btn-danger" disabled>erreur</button> -->

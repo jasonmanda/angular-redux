@@ -14,8 +14,8 @@ declare var bootstrap: any;
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular11app';
-  libelle = "";
+  title = 'Voiture';
+  marque = "";
   qte = 0;
   min = 0;
   max = 0;
@@ -30,7 +30,7 @@ export class AppComponent {
     this.store.dispatch({
       type: 'ADD_CAR',
       payload: <Car>{
-        brand: this.libelle
+        brand: this.marque
       }
     });
     // this.status='encours';

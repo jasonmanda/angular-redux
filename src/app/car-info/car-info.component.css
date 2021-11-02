@@ -9,7 +9,10 @@
     
 }
 .card-item:hover{
-    transform: translateY(3px);
-    box-shadow: 0 3px 7px rgba(0, 0, 0,0.7);
-    transition: transform 1s ease;
+    transform: translateY(-3px);
+    box-shadow: 0 3px 7px rgba(0, 0, 0,0.3);
+    transition: transform .500s ease;
+}
+.card-body-item{
+    position :relative
 }
