@@ -8,8 +8,14 @@
     cursor: pointer;
     
 }
+
+.card-item{
+    transition: transform .500s ease;
+    
+}
 .card-item:hover{
-    transform: translateY(-3px);
+    /* transform: translateY(-3px); */
+    transform: scale(1.0600);
     box-shadow: 0 3px 7px rgba(0, 0, 0,0.3);
     transition: transform .500s ease;
 }
