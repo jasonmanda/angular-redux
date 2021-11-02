@@ -19,8 +19,8 @@ export class CarInfoComponent implements OnInit {
 
   public close() {
  
-      let x=document.getElementById("car-" + this.index);
-      if (x !== undefined && x !== null)x.remove();
+      // let x=document.getElementById("car-" + this.index);
+      // if (x !== undefined && x !== null)x.style.display='none';
       this.store.dispatch({
         type: 'REMOVE_CAR',
         payload: {

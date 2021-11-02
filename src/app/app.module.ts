@@ -8,11 +8,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { CarInfoComponent } from './car-info/car-info.component';
 import { StoreModule } from '@ngrx/store';
 import { carReducer } from 'src/reducer/car.reducer';
+import { ReLengthPipe } from 'src/pipe/relength';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CarInfoComponent
+    CarInfoComponent,
+    ReLengthPipe
   ],
   imports: [
     BrowserModule,
@@ -22,7 +24,9 @@ import { carReducer } from 'src/reducer/car.reducer';
     HttpClientModule,
     StoreModule.forRoot({cars: carReducer })
   ],
-  providers: [],
+  providers: [
+    ReLengthPipe
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { 

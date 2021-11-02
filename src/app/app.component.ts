@@ -20,10 +20,10 @@ export class AppComponent {
   min = 0;
   max = 0;
   status = '';
-  cars: Observable<Car[]>;
+  car$: Observable<Car[]>;
 
   constructor(private carService: CarService, public store: Store<IAppState>) {
-    this.cars = this.store.select(state => state.cars);
+    this.car$ = this.store.select(state => state.cars);
   }
   public envoyer($event: Event) {
     $event.preventDefault();
