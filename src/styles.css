@@ -1,8 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap/dist/css/bootstrap.css';
+@import "~bootstrap-icons/font/bootstrap-icons.css";
 @import '~animate.css/animate.css';
 
 body{
-    background-color: rgb(164, 169, 173);
+    background-color: rgb(215, 216, 217,0.42);
     padding: 1rem;
+    
 }

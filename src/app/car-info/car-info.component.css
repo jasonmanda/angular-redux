@@ -14,5 +14,6 @@
     transition: transform .500s ease;
 }
 .card-body-item{
-    position :relative
+    position :relative;
 }
+ 

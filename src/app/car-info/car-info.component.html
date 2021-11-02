@@ -1,8 +1,7 @@
 <div class="card card-item">
     <div class="card-body card-body-item">
-        <small>Position:{{index+1}}</small>
-
-        <p>Brand:{{car.brand|reLength:15:'...'}}</p>
+        <small>Position: {{index+1}}</small>
+        <p>Brand: {{car.brand|reLength:15:'.'}}</p>
         <!-- <p>Models Number:{{car.models.length}}</p> -->
     </div>
     <p class="close-x-c text-right" (click)="close()">&#x2715;</p>

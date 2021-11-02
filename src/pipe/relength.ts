@@ -5,6 +5,6 @@ export class ReLengthPipe implements PipeTransform {
     transform(value: string, max: number = 20,caractereOverflow:string="."): string {
         if (value == null || value == undefined) return "";
         if(value.length<max)return value.substring(0, (max - 1));
-        return value.substring(0, (max - 1))+caractereOverflow;
+        return value.substring(0, (max - (1+(caractereOverflow.length>1?0:caractereOverflow.length ))))+caractereOverflow;
     }
 }
