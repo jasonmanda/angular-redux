@@ -8,3 +8,6 @@ body{
     padding: 1rem;
     
 }
+a{
+    text-decoration: unset;
+}
