@@ -10,14 +10,12 @@ import { StoreModule } from '@ngrx/store';
 import { carReducer } from 'src/reducer/car.reducer';
 import { ReLengthPipe } from 'src/pipe/relength';
 import { CardComponent } from './card/card.component';
-import { SideBarComponent } from './side-bar/side-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CarInfoComponent,
     CardComponent,
-    SideBarComponent,
     ReLengthPipe
   ],
   imports: [
