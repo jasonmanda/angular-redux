@@ -4,12 +4,12 @@
     <div class="col-md-6 mx-auto  mt-2">
     <div class="card">
       <div class="card-body">
-        <form method="post" (ngSubmit)="envoyer($event)">
+        <form method="post" [formGroup]="form" (ngSubmit)="envoyer($event)">
           <h1 class="animate__animated animate__slideInDown">Formulaire {{title}}
           </h1>
           <div class="form-group form-row">
               <label for="marque">Marque</label>
-              <input type="text" class="form-control" maxlength="20" required id="marque" name="marque" [(ngModel)]="marque"/>
+              <input type="text" class="form-control" required id="marque" name="marque" formControlName="marque"/>
           </div>
         <div class="form-group form-row text-center mt-2" [ngSwitch]='status'>
           <button *ngSwitchDefault type="submit" class="btn btn-success">Valider</button>
