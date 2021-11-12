@@ -44,3 +44,15 @@
     font-size: 14px;
     font-weight: 600
 }
+
+
+.card-item{
+    transition: transform .300s ease-in;
+    
+}
+.card-item:hover{
+    transform: translateY(-3px);
+    /* transform: scale(1.03); */
+    box-shadow: 0 3px 7px rgba(0, 0, 0,0.3);
+    transition: transform .500s ease-in-out;
+}

@@ -16,7 +16,7 @@ import { CardComponent } from './card/card.component';
     AppComponent,
     CarInfoComponent,
     CardComponent,
-    ReLengthPipe
+    ReLengthPipe,
   ],
   imports: [
     BrowserModule,
@@ -24,7 +24,7 @@ import { CardComponent } from './card/card.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    StoreModule.forRoot({cars: carReducer })
+    StoreModule.forRoot({cars: carReducer }),
   ],
   providers: [
     ReLengthPipe
