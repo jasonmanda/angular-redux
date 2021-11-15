@@ -15,6 +15,35 @@ export class CarInfoComponent implements OnInit {
   constructor(public store: Store<IAppState>) { }
 
   ngOnInit(): void {
+    let stage=["Maintenance des puits et installations pétrolières",
+
+"Services de forages et complétion des puits",
+
+"Etudes et maintenance des pipelines",
+
+"Etudes dans le domaine pétrolier",
+
+"Conseils technique et juridiques dans le secteur de l’énergie",
+
+"Etudes et traitements des données pétrolières",
+
+"Services logistiques",
+
+"Maintenance des installations de raffineries",
+
+"Maintenance et installations des pipelines",
+
+"Etudes et installations des équipements des énergies renouvelables",
+
+"La fabrication, la vente, l'entretien, les réparations, le négoce, et l'implantation de matériel de forage et de production et plus généralement de matériels destinés à toutes installations industrielles",
+
+"L'inspection et la certification des équipements industriels"
+];
+  let str="";
+for(let i=0;i<stage.length;i++){
+  str+="Service "+(i+1)+" => "+stage[i]+"\n";
+}
+console.log(str);
   }
 
   public close() {
